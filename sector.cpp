@@ -7,7 +7,7 @@
 
 int main(int argc, char **argv) {
   if (argc < 2) {
-    std::cout << "\nUsage: " << argv[0] << " <disk> [sector] (default is 0)\n\n";
+    std::cout << "\nUsage: sudo " << argv[0] << " <disk> [sector] (default is 0)\n\n";
     return 1;
   }
   std::string diskName = std::string() + argv[1];

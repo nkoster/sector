@@ -4,6 +4,20 @@
 g++ -O -Wall -std=c++11 sector.cpp -o sector
 ```
 
+or statically
+
+```
+g++ -static -O -Wall -std=c++11 sector.cpp -o sector
+```
+
+A huge binary, but you can use it in almost every Linux system.
+
+### Usage
+
+```
+sudo ./sector <disk> [sector] (default is 0)
+```
+
 ### Examples
 
 ```
