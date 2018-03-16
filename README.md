@@ -4,7 +4,7 @@
 g++ -O -Wall -std=c++11 sector.cpp -o sector
 ```
 
-### Example
+### Examples
 
 ```
 sudo ./sector /dev/nvme0n1 1 | strings
