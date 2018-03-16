@@ -14,13 +14,9 @@ int main(int argc, char **argv) {
   std::string sector = std::string() + "0";
   if (argc > 2) {
     sector = std::string() + argv[2];
-  } else {
-    sector = std::string() + "0";
   }
   std::string::size_type sz;
   int s = std::stoi (sector, &sz);
-  //std::cout << s << "\n";
-  //std::cout << diskName << "\n";
   std::string diskError = std::string() + diskName + ": ";
   std::ifstream disk(diskName, std::ios_base::binary);
   if(!disk)
