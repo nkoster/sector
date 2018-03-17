@@ -1,5 +1,5 @@
 
-Dump a specific sector, super simple C++ example code.
+**Dump a specific sector from a disk, super simple C++ example code.**
 
 ### Compile
 
