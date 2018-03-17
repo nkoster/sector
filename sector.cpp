@@ -13,7 +13,6 @@ int main(int argc, char **argv) {
   if (argc > 2) sector += std::string() + argv[2];
   std::string::size_type sz;
   int s = std::stoi (sector, &sz);
-  std::string diskError = std::string() + drive + ": ";
   std::ifstream disk(drive, std::ios_base::binary);
   if(!disk) return 2;
   disk.seekg(512 * s);
