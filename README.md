@@ -33,8 +33,12 @@ which does the exact same as
 sudo dd if=/dev/nvme0n1 skip=1 bs=512 count=1 2>/dev/null | strings
 ```
 
-Another example:
+Find a sector, holding a string, within a range of sectors:
 
 ```
-sudo ./sector /dev/sda 32347 | hexdump -C
+for s in `seq 2048 100000`
+do
+  echo -e "\n------${s}------"
+  sector /dev/sda $s | strings | grep Drone && break
+done
 ```
