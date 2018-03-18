@@ -33,12 +33,12 @@ which does the exact same as
 sudo dd if=/dev/nvme0n1 skip=1 bs=512 count=1 2>/dev/null | strings
 ```
 
-Find a sector, holding a string, within a range of sectors:
+Find a sector, holding the string "model", within a range of sectors:
 
 ```
 for s in `seq 2048 100000`
 do
-  echo -e "\n------${s}------"
-  sector /dev/sda $s | strings | grep Drone && break
+  echo -ne "------${s}------\r"
+  sector /dev/sda $s | strings | grep -q 'model' && echo && break
 done
 ```
