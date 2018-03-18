@@ -42,3 +42,13 @@ do
   sudo ./sector /dev/nvme0n1 $s | strings | grep -q 'model' && echo && break
 done
 ```
+
+For the record, the above string search example is totally ineffecient.
+
+Much better:
+
+```
+sudo grep -aob 'model' /dev/nvme01n1
+ <offset>:model
+sudo ./sector /dev/nvme01n1 $((<offset>/512)) | hexdump -C
+```
