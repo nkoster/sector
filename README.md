@@ -39,6 +39,6 @@ Find a sector, holding the string "model", within a range of sectors:
 for s in `seq 2048 100000`
 do
   echo -ne "------${s}------\r"
-  sector /dev/sda $s | strings | grep -q 'model' && echo && break
+  sudo ./sector /dev/sda $s | strings | grep -q 'model' && echo && break
 done
 ```
