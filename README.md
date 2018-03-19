@@ -43,7 +43,7 @@ do
 done
 ```
 
-For the record, the above string search example is totally ineffecient.
+For the record, the above string search example is totally inefficient.
 
 Much better:
 
